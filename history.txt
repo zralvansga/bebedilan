@@ -5,3 +5,7 @@ Langkah 1
 
 Langkah 2
  - load image utk background
+
+Langkah 3
+ - input keyboard
+ - move image
