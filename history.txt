@@ -1,2 +1,4 @@
 history.txt
 
+Langkah 1
+ - load image png
