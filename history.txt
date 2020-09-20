@@ -2,3 +2,6 @@ history.txt
 
 Langkah 1
  - load image png
+
+Langkah 2
+ - load image utk background
