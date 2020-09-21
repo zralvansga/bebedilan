@@ -9,3 +9,7 @@ Langkah 2
 Langkah 3
  - input keyboard
  - move image
+
+Langkah 4
+ - rotate image
+ - get mouse position

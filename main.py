@@ -1,4 +1,4 @@
-import pygame
+import pygame, math
 from pygame.locals import *
 
 pygame.init()
@@ -34,7 +34,12 @@ while(running):
     screen.blit(kastil,(0,240))
     screen.blit(kastil,(0,345))
     
-    screen.blit(player,playerpos)
+    mousepos = pygame.mouse.get_pos()
+    angle = math.atan2(mousepos[1] - (playerpos[1] + 32), mousepos[0] - (playerpos[0] + 26))
+    playerrot = pygame.transform.rotate(player, 360 - angle * 57.29)
+    new_playerpos = (playerpos[0] - playerrot.get_rect().width / 2, playerpos[1] - playerrot.get_rect().height / 2)
+
+    screen.blit(playerrot,new_playerpos)
 
     pygame.display.flip()
     # pygame.display.update() 
@@ -66,10 +71,10 @@ while(running):
                 keys['kanan'] = False
 
         if keys["atas"]:
-            playerpos[sumbuX] -= 10
+            playerpos[sumbuX] -= 5
         elif keys["bawah"]:
-            playerpos[sumbuX] += 10
+            playerpos[sumbuX] += 5
         elif keys["kiri"]:
-            playerpos[sumbuY] -= 10
+            playerpos[sumbuY] -= 5
         elif keys["kanan"]:
-            playerpos[sumbuY] += 10
+            playerpos[sumbuY] += 5
