@@ -13,3 +13,7 @@ Langkah 3
 Langkah 4
  - rotate image
  - get mouse position
+
+Langkah 5
+ - looping for in list
+ - use sin and cos to get coordinat
